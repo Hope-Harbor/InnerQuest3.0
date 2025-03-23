@@ -40,26 +40,25 @@ header {
 }
 
 main {
-  width: 95%;
+  width: 75%;
   max-width: 800px;
   margin: 0 auto;
-  margin-top: 80px; /* Add space for fixed header */
   justify-content: center;
-  padding: 30px;
+  padding: 40px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  font-size: 2.0rem;
+  font-size: 2.3rem;
   margin-top: 18px;
   margin-bottom: 30px;
   color: #333;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin: 20px 0;
   color: #555;
 }
@@ -163,8 +162,8 @@ h2 {
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
   border-top: 15px solid #ffffff;
 }
 
@@ -179,18 +178,20 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  gap: 15px;
+  width: 80%;
+  margin-left: 50px;
+  gap: 25px;
   padding: 0 10px;
 }
 
 .choice-button-group button {
   flex: 1;
-  min-width: 80px;
+  max-width: 120px;
   border: none;
   border-radius: 8px;
   padding: 12px 15px;
-  font-size: 20px;
+  display: center;
+  font-size: 21px;
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -238,7 +239,7 @@ h2 {
 @media (min-width: 580px) {
   .identity-button-group {
     flex-direction: row;
-    /* justify-content: center; */
+    justify-content: center;
     gap: 15px; 
   }
 
@@ -264,28 +265,45 @@ h2 {
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
   
+  h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.2;
+  }
+
   .identity-button-group {
     gap: 15px; 
     width: 95%;
   }
 
   .question-box {
-    max-width: 600px;
+    max-width: 500px;
     margin: 20px auto;
   }
 
+  .question-box{
+    width: 100%;
+    align-items: center;
+  }
+  
   .question-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   
   .choice-button-group {
-    max-width: 95%;
-    margin: 35px auto 0;
+    max-width: 100%;
+    margin: 35px 30 0;
+  }
+
+  .choice-button-group button {
+    padding: 10px 15px;
+    justify-content: center;
+    align-content: center;
+    display: flex;
   }
 }
 

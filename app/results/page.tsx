@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import html2canvas from "html2canvas";
 
 export default function ResultPage() {
@@ -142,54 +143,61 @@ export default function ResultPage() {
   };
 
   return (
-    <main className="container">
-      <h2 className="title">Result</h2>
+    <div>
+      {/* Header */}
+      <header>
+        <Link href="/" className="logo">InnerQuest</Link>
+      </header>
 
-      <div id="result-section" className="result-box" ref={resultBoxRef}>
-        <div className="image-container">
-          <img
-            src={`/images/${emotion?.toLowerCase() || "content"}.png`}
-            alt="Emotion Result"
-            className="result-image"
-            crossOrigin="anonymous" // Add this for CORS
-          />
-        </div>
+      <main className="container">
+        <h2 className="title">Result</h2>
 
-        <p className="emotion-name">{emotion || "Unknown Emotion"}</p>
-
-        {/* Audio Player */}
-        <div className="audio-player">
-          <audio id="bgMusic" preload="metadata">
-            <source src="/background-music.mp3" type="audio/mpeg" />
-          </audio>
-          <div className="audio-controls">
-            <button 
-              className="audio-btn" 
-              onClick={handleMusicClick}
-              aria-label={isPlaying ? 'Pause music' : 'Play music'}
-            >
-              {isPlaying ? '⏸' : '▶'}
-            </button>
-            <input 
-              type="range" 
-              id="volumeSlider" 
-              min="0" 
-              max="100" 
-              defaultValue="70" 
-              className="volume-control"
-              onClick={() => alert("🎵 Volume control is under development. Stay tuned!")}
+        <div id="result-section" className="result-box" ref={resultBoxRef}>
+          <div className="image-container">
+            <img
+              src={`/images/${emotion?.toLowerCase() || "content"}.png`}
+              alt="Emotion Result"
+              className="result-image"
+              crossOrigin="anonymous" // Add this for CORS
             />
           </div>
-        </div>
-        
-        {/* Summary Box */}
-        <div className="text-box">
-          <p className="summary-text">{summary}</p>
-        </div>
-      </div>
 
-      {/* Share Button */}
-      <button id="share-btn" className="share-btn">Share</button>
-    </main>
+          <p className="emotion-name">{emotion || "Unknown Emotion"}</p>
+
+          {/* Audio Player */}
+          <div className="audio-player">
+            <audio id="bgMusic" preload="metadata">
+              <source src="/background-music.mp3" type="audio/mpeg" />
+            </audio>
+            <div className="audio-controls">
+              <button 
+                className="audio-btn" 
+                onClick={handleMusicClick}
+                aria-label={isPlaying ? 'Pause music' : 'Play music'}
+              >
+                {isPlaying ? '⏸' : '▶'}
+              </button>
+              <input 
+                type="range" 
+                id="volumeSlider" 
+                min="0" 
+                max="100" 
+                defaultValue="70" 
+                className="volume-control"
+                onClick={() => alert("🎵 Volume control is under development. Stay tuned!")}
+              />
+            </div>
+          </div>
+          
+          {/* Summary Box */}
+          <div className="text-box">
+            <p className="summary-text">{summary}</p>
+          </div>
+        </div>
+
+        {/* Share Button */}
+        <button id="share-btn" className="share-btn">Share</button>
+      </main>
+    </div>
   );
 }

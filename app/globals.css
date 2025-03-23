@@ -176,27 +176,30 @@ h2 {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center; /* Changed from space-between to center */
   align-items: center;
-  width: 80%;
-  margin-left: 50px;
+  width: 100%; /* Changed from 80% to 100% */
+  max-width: 450px; /* Added max-width */
+  margin-left: auto; /* Changed from fixed 50px to auto */
+  margin-right: auto; /* Added auto margin-right */
   gap: 25px;
   padding: 0 10px;
 }
 
 .choice-button-group button {
   flex: 1;
+  min-width: 80px; /* Added min-width */
   max-width: 120px;
   border: none;
   border-radius: 8px;
-  padding: 12px 15px;
-  display: center;
+  padding: 14px 15px;
   font-size: 21px;
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
   color: white;
   white-space: nowrap;
+  text-align: center; /* Added text-align center */
 }
 
 .choice-button-group button:nth-child(1) {
@@ -224,18 +227,6 @@ h2 {
 }
 
 /* Add responsive adjustments */
-@media (max-width: 480px) {
-  .choice-button-group {
-    gap: 8px;
-    padding: 0 5px;
-  }
-
-  .choice-button-group button {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-}
-
 @media (min-width: 580px) {
   .identity-button-group {
     flex-direction: row;
@@ -296,13 +287,14 @@ h2 {
   
   .choice-button-group {
     max-width: 100%;
-    margin: 35px 20 0;
+    margin: 30px auto 0;
+    gap: 15px;
   }
 
   .choice-button-group button {
-    padding: 10px 15px;
+    padding: 12px;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     display: flex;
   }
 }

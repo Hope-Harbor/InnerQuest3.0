@@ -508,3 +508,13 @@ h2 {
     margin: 10px;
   }
 }
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .result-image {
+    max-width: 300px;
+  }
+}

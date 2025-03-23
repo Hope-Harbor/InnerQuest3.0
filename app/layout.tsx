@@ -12,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="/favicon.ico" 
           sizes="any"
         />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1983494775099471" crossOrigin="anonymous"/>
       </head>
 
       {/* Google Analytics */}

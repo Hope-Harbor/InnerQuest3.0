@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { fetchClientUuid, fetchQuestion, completeQuestionnaire } from "@/api/questionnaire";
 import RainbowText from "@/components/RainbowText";
+import Link from "next/link";
 
 export default function QuestionnairePage() {
   const [question, setQuestion] = useState<string>("Loading...");
@@ -66,23 +67,33 @@ export default function QuestionnairePage() {
   };
 
   return (
-    <main>
-      <RainbowText text="InnerQuest" />
-      {userRole && <h2 className="welcome-heading">Welcome, {userRole}!</h2>}
-      <div className="question-box">
-        <p className="question-text">{question}</p>
-      </div>
-      <div className="choice-button-group">
-        <button onClick={() => handleAnswer("Yes")}>Yes</button>
-        <button onClick={() => handleAnswer("No")}>No</button>
-        <button onClick={() => handleAnswer("Maybe")}>Maybe</button>
-      </div>
-      <div className="progress-wrapper">
-        <p>{progress / 20}/5</p>
-        <div className="progress-bar">
-          <div className="progress-bar-inner" style={{ width: `${progress}%` }}></div>
+    <div>
+      {/* Header */}
+      <header>
+        <Link href="/" className="logo">InnerQuest</Link>
+      </header>
+
+      <main>
+        <RainbowText text="InnerQuest" />
+        {userRole && <h2 className="welcome-heading">Welcome, {userRole}!</h2>}
+        <div className="question-box">
+          <p className="question-text">{question}</p>
         </div>
-      </div>
-    </main>
+        <div className="choice-button-group">
+          <button onClick={() => handleAnswer("Yes")}>Yes</button>
+          <button onClick={() => handleAnswer("No")}>No</button>
+          <button onClick={() => handleAnswer("Maybe")}>Maybe</button>
+        </div>
+        <div className="progress-wrapper">
+          <p>{progress / 20}/5</p>
+          <div className="progress-bar">
+            <div 
+              className="progress-bar-inner" 
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

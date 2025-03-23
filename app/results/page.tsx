@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import html2canvas from "html2canvas";
+import Script from 'next/script';
 
 export default function ResultPage() {
   const [emotion, setEmotion] = useState<string | null>(null);
@@ -148,6 +149,24 @@ export default function ResultPage() {
       <header>
         <Link href="/" className="logo">InnerQuest</Link>
       </header>
+
+      {/* Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-32ZXDHP4RC"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-32ZXDHP4RC');
+          `,
+        }}
+      />
 
       <main className="container">
         <h2 className="title">Result</h2>

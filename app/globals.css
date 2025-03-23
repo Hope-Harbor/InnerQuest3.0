@@ -124,28 +124,6 @@ h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Responsive Design */
-@media (min-width: 580px) {
-  .identity-button-group {
-    flex-direction: row;
-    /* justify-content: center; */
-    gap: 15px; 
-  }
-
-  .identity-button-group button {
-    width: 33%;
-  }
-}
-
-@media (min-width: 480px) {
-  .identity-button-group button {
-    height: 65px; 
-    margin: 5px; 
-    font-size: 17px; 
-    padding: 12px;
-  }
-}
-
 .language-select {
   margin: 35px 0;
   width: 100%;
@@ -257,45 +235,57 @@ h2 {
   }
 }
 
-@media (min-width: 481px) {
-  .question-box {
-    max-width: 600px;
-    margin: 20px auto;
+@media (min-width: 580px) {
+  .identity-button-group {
+    flex-direction: row;
+    /* justify-content: center; */
+    gap: 15px; 
   }
 
-  .choice-button-group {
-    max-width: 75%;
-    margin: 35px auto 0;
+  .identity-button-group button {
+    width: 33%;
   }
 }
 
 @media (max-width: 768px) {
   main {
-    width: 90%;
-    padding: 20px;
-    margin-top: 70px;
-  }
-}
-
-@media (max-width: 480px) {
-  main {
     width: 95%;
-    padding: 15px;
-    margin-top: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  .identity-button-group {
-    gap: 15px; 
-    width: 90%; /* Slightly reduced width */
+    padding: 45px;
+    margin-top: 70px;
+    margin-bottom: 30px;
   }
 
   .identity-button-group button {
-    height: 65px; 
+    height: 68px; 
+    width: 100%;
     margin: 8px 1px; 
-    font-size: 16px; 
+    font-size: 17px; 
     padding: 12px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+  
+  .identity-button-group {
+    gap: 15px; 
+    width: 95%;
+  }
+
+  .question-box {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .question-text {
+    font-size: 1.4rem;
+  }
+  
+  .choice-button-group {
+    max-width: 95%;
+    margin: 35px auto 0;
   }
 }
 

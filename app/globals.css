@@ -293,6 +293,7 @@ h2 {
 
   .choice-button-group button {
     padding: 12px;
+    font-size: 19px;
     justify-content: center;
     align-items: center;
     display: flex;

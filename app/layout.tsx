@@ -13,10 +13,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           sizes="any"
         />
 
-        {/* Google AdSense */}
+        {/* Google AdSense Setup */}
         <Script 
         async 
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1983494775099471" crossOrigin="anonymous"
+        strategy="afterInteractive"
         /> 
 
       </head>
@@ -40,6 +41,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       />
       <body>
         {children} {/* This renders the current page (e.g., Home, Questionnaire) */}
+        
+        {/* AdSense Display Ad */}
+        <Script id="adsense-display" strategy="afterInteractive">
+          {`
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          `}
+        </Script>
+        <div>
+          <ins
+            className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-1983494775099471"
+            data-ad-slot="5886739152"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+        </div>
       </body>
     </html>
   );

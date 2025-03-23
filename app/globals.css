@@ -188,7 +188,7 @@ h2 {
 
 .choice-button-group button {
   flex: 1;
-  min-width: 80px; /* Added min-width */
+  min-width: 90px; /* Added min-width */
   max-width: 120px;
   border: none;
   border-radius: 8px;

@@ -4,7 +4,7 @@ InnerQuest is an interactive web application that helps users explore and unders
 
 ## Features
 
-- **Role-Based Experience**: Users can choose their identity (Adolescence, Undergraduate, or Working Professional) for personalized interactions
+- **Role-Based Experience**: Users can choose their identity (Adolescent, Undergraduate, or Working Professional) for personalized interactions
 - **Dynamic Questionnaire**: Adaptive questions that respond to user inputs
 - **Emotional Analysis**: Generates personalized summaries based on detected emotions
 - **Interactive Results**:

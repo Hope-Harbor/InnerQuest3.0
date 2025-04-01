@@ -437,7 +437,7 @@ h2 {
 /* Medium/Small Screen */
 @media (max-width: 768px) {
   main {
-    width: 95%;
+    width: 92%;
     padding: 40px;
     margin-top: 70px;
     margin-bottom: 30px;

@@ -252,7 +252,7 @@ h2 {
 }
 
 .container {
-  width: 93%;
+  width: 97%;
   max-width: 600px; /* Match main's max-width */
   margin: 0 auto;
   background: white;
@@ -263,7 +263,7 @@ h2 {
 
 /* For result-specific containers */
 .result-container {
-  width: 95%;
+  width: 100%;
   max-width: 400px;
   background: white;
   padding: 15px;
@@ -315,7 +315,7 @@ h2 {
 .text-box {
   background: #eef0f7;
   padding: 10px;
-  font-size: 17px;
+  font-size: 15px;
   text-align: left;
   letter-spacing: 0.02px;
   line-height: 1.4;

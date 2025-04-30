@@ -116,7 +116,7 @@ export default function QuestionnairePage() {
 
       // Generate next question with language-specific prompts to avoid translation API calls
       const nextPrompt = language === 'en'
-        ? `As a balanced and neutral psychologist, create a thoughtful and creative question for a ${userRole} about their mental well-being at this moment/today that can be answered with Yes, No, or Maybe. It can be asking from any aspect of life. It should be less than 20 words. `
+        ? `As a balanced and neutral psychologist, create a thoughtful and creative question for a ${userRole} about their mental well-being at this moment/today that can be answered with Yes, No, or Maybe. It can be asking from any aspect of life and it should be different from any of the previous questions. It should be less than 20 words. `
         : `身為一位心理諮商師，請用繁體中文為一位${
         userRole === 'teenager' ? '青少年' : 
         userRole === 'undergraduate' ? '大學生' : 
